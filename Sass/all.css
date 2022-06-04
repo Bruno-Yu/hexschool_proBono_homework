@@ -107,6 +107,7 @@ img {
   z-index: 50;
   right: 48px;
   bottom: 23px;
+  border: none;
 }
 
 .btn-primary {
