@@ -4,8 +4,8 @@ import "./plugins/jQuery.js";
 
 // jQuery
  $(function(){
-    $('h1').on('click', function(){
-      $('h1').slideToggle();
+    $('.btn-toTop').on('click', function(){
+      $(window).scrollTop(0);
     })
   })
 
