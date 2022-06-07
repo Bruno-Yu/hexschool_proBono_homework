@@ -11,18 +11,23 @@
 img{
   max-width: 100%;
   height: auto;
-}
-.body{
-max-width: 100vw;
-}
+} 
+
 .index-bg{
   padding: 0;
 width: 100%;
   position: absolute;
-  background-image: url('../images/bg_home.svg'), url('../images/ball01.svg'), url('../images/ball02.svg'), url(../images/ball03.svg);
+  background-image: url('../images/bg_home.svg'), url('../images/ball01.svg'), url('../images/ball02.svg'), url('../images/ball03.svg');
   background-repeat:no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: right 0px top 0px, left -222px top calc(100vh - 180px),  right -100px top 215vh, 50px 340vh;
+  background-position: right 0px top 0px, left -222px top calc(100vh - 180px),  right -100px top 215vh, 50px 4827px;
   background-size: auto 768px, 360px 360px, 310px 310px, 150px 150px;
+}
+@media(max-width: 376px){
+  .index-bg {
+      background-image: url('../images/bg_home_sm.svg'), url('../images/ball01.svg'), url('../images/ball02.svg'), url('../images/ball03.svg');
+  background-position: 20px 391px , left -77px top 743px, right -47px top 3067px, -76px 600vh;
+  background-size: 334px 245px, 126px 126px, 135px 135px, 153px 153px;
+}
 }
 // 排版口訣: 上下用pixel 左右用%
 // 線索說明1: container 容器 00:00 ~ 大概10分
@@ -38,7 +43,11 @@ width: 100%;
 .container{
   width: 100%; //單寫width就會出現x軸了
   padding:0 139px;
-  margin: 0 auto;
+}
+@media(max-width: 376px){
+  .container{
+      padding: 0 20px;
+  }
 }
 
 
@@ -65,7 +74,16 @@ width: 100%;
   right: 48px;
   bottom: 23px;
   border:none;
-
+}
+@media(max-width: 376px){
+  .btn-toTop{
+  right: 16px;
+  bottom: 16px;
+  font-size: 14px;
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+  }
 }
 
 .btn-primary {
@@ -80,14 +98,16 @@ width: 100%;
 }
 .header{
   width: 100%;
-      height: 100vh;
+  height: 100vh;
   .navbar{
+  padding: 24px 0;
+  .container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  }
   .logo{
-  h1{
+    a h1{
     display: block;
     background:url('../images/logo.png');
     width: 219px;
@@ -96,10 +116,10 @@ width: 100%;
     text-indent: 101%;
     white-space:nowrap;
     overflow:hidden;
+    }
   }
-}
-.price{
-  &-btn{
+  .price{
+    &-btn{
     @include button(16px);
       }
     }
@@ -111,6 +131,12 @@ width: 100%;
     justify-content: space-between;
     .col-6{
       width: 50%;
+      img{
+        max-width:532px; 
+        height:auto; 
+        display:block ;
+        margin-left:auto;
+      }
     }
     &-section {
       p{
@@ -133,7 +159,46 @@ width: 100%;
     }
   }
 }
+@media(max-width: 376px){
+  .header{
+    
+     .navbar {
+      border-bottom: 1px solid $warning;
 
+      .logo {
+        a h1 {
+          width: 131px;
+          height: 24px;
+        }
+      }
+    }
+  .banner{
+    display: block;
+    .col-6{
+      width: 100%;
+      img{
+        margin-left: 0px;
+        }
+      }
+    &-section {
+       p{
+        font-size: 16px;
+        line-height: 26px;
+      }
+      &-title{
+        font-size: 32px;
+        line-height: 46px;
+      }
+      &-subTitle{
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        
+      }
+    }
+  }
+}
+}
 
 .area-1{
   margin-top: 100px;
@@ -178,6 +243,41 @@ width: 100%;
   }
 }
 }
+@media(max-width: 376px){
+  .area-1{
+      margin-top: 60px;
+      margin-bottom: 60px;
+     &-title{
+         font-size: 28px;
+    line-height: 40px;
+    }
+      .social-media{
+  display: block;
+  .col-4{
+    width: 100%;
+    margin-bottom: 24px;
+    }
+    &-card{
+         &-img{
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto;
+    }
+    &-title{
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 26px;
+      margin: 16px 0px;
+      color: $dark;
+      white-space:nowrap;
+    }
+    }
+   }
+  }
+}
+
+
 .area-2{
   text-align: center;
   margin-bottom: 100px;
@@ -210,16 +310,46 @@ width: 100%;
       &-title{
         color:$primary;
         font-weight: bold;
+        line-height: 24px;
         margin-bottom: 1rem;
       }
       &-text{
         text-align: center;
+        line-height: 24px;
         margin-bottom: 1rem;
       }
     }
   }
 }
 
+@media(max-width: 376px){
+  .area-2{
+  margin-bottom: 60px;
+    &-title{
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+    &-subtitle{
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+    &-card{
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 24px ;
+      &-group{
+        display: block;
+      }
+      &-img{
+        width: 100%;
+        border-radius: 12px 12px 0px 0px;
+      }
+    }
+  }
+}
 
 .area-3{
   display: flex;
@@ -257,8 +387,7 @@ width: 100%;
       border-radius:50%;
       text-align: center;
       margin-bottom:24px ;
-     
-     line-height: 86px;
+      line-height: 86px;
       img {
         height: 52px;
         width: 52px;
@@ -305,7 +434,40 @@ width: 100%;
   }
 }
 
+@media(max-width: 376px){
+  .area-3{
+    flex-direction:column-reverse;
+      margin-bottom: 60px;
+    .col-6{
+      width: 100%;
+    }
+    .card{
+      padding: 24px;
+      margin: 0 auto 24px auto;
+    }
+    &-text{
+         font-size: 16px;
+    line-height: 24px;
+        &-section{
+          margin: 0 auto;
+          text-align: center;
+          }
+            &-title{
+      font-size: 24px;
+      line-height: 40px;
+      font-weight: bold;
+      &:first-child{
+        margin-top: 28px;
+      }
+    }
+        &-btn{
+          margin-top: 16px;
+          margin-bottom: 32px;
+    }
+    }
+  }
 
+}
 
 // .header{
 
@@ -389,6 +551,31 @@ width: 100%;
   }
 }
 
+@media(max-width: 376px){
+  .comment{
+    padding-bottom: 60px;
+      &-title{
+    font-size: 28px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+    &-card-group{
+    display: block;
+  }
+  &-card{
+    width: 100%;
+    &:nth-child(2){
+      display: none;
+    }
+    &:nth-child(3){
+      display: none;
+    }
+
+  }
+
+  }
+}
 
 .footer{
   background:#F5F5F5;
@@ -425,6 +612,21 @@ width: 100%;
 //   margin: 0 auto;
 // }
 
-h1{
-  color: blue;
+@media(max-width:376px){
+  .footer-plan{
+  background-image: url('../images/footer_sm.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 293px;
+  padding-bottom: 60px;
+  text-align: center;
+  vertical-align: center;
+  p {
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 24px;
+
+  }
+}
 }
