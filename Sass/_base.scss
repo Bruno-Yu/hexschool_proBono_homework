@@ -1,10 +1,29 @@
 
 
 body{
-font-family: $font-family-Noto-TC;
-color:$dark;
 background: #FFFFFF;
+// font style
+color:$dark;
+font-family: $font-family-Noto-TC;
 font-size: 16px;
 line-height: 24px;
+}
 
+
+
+// layout
+.container{
+  width: 100%; //單寫width就會出現x軸了
+  padding:0 139px;
+}
+@media(max-width: 768px){
+  .container{
+      padding: 0 50px;
+  }
+}
+
+@media(max-width: 376px){
+  .container{
+      padding: 0 20px;
+  }
 }

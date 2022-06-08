@@ -64,11 +64,28 @@ img {
 }
 
 body {
-  font-family: "Noto Sans TC", sans-serif;
-  color: #221E1F;
   background: #FFFFFF;
+  color: #221E1F;
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 16px;
   line-height: 24px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 139px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 376px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 .footer {
@@ -115,23 +132,6 @@ body {
     height: 50px;
     width: 50px;
     z-index: 1000;
-  }
-}
-
-.container {
-  width: 100%;
-  padding: 0 139px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 50px;
-  }
-}
-
-@media (max-width: 376px) {
-  .container {
-    padding: 0 20px;
   }
 }
 
@@ -892,6 +892,146 @@ body {
     font-size: 24px;
     line-height: 35px;
     margin-bottom: 24px;
+  }
+}
+
+.pricing-bg {
+  background-image: url("../images/banner.svg");
+  background-position: right 0px top 0px;
+  background-repeat: no-repeat;
+  background-size: 885px 559px;
+}
+
+@media (max-width: 530px) {
+  .pricing-bg {
+    background-image: none;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+}
+
+.header .navbar {
+  padding: 24px 0;
+}
+
+.header .navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .navbar .logo a h1 {
+  display: block;
+  background: url("../images/logo.png");
+  width: 219px;
+  height: 40px;
+  background-size: cover;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.header .navbar .price-btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 24px;
+  padding: 8px 32px;
+  line-height: 24px;
+  border: none;
+  font-family: "Comfortaa", cursive;
+}
+
+.header .pricing-banner-section p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #56C4C5;
+  line-height: 26px;
+}
+
+.header .pricing-banner-section-title {
+  padding-top: 30px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 70px;
+}
+
+.header .pricing-banner-section-subTitle {
+  margin-top: 16px;
+  font-size: 20px;
+  line-height: 29px;
+}
+
+@media (max-width: 530px) {
+  .header .navbar {
+    border-bottom: 1px solid #F5CA52;
+  }
+  .header .navbar .logo a h1 {
+    width: 180px;
+    height: 30px;
+  }
+  .header .pricing-banner {
+    background-image: url("../images/banner_sm.svg");
+    background-position: top 0px right 0px;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    height: 90vh;
+  }
+  .header .pricing-banner-section {
+    margin-bottom: auto;
+  }
+  .header .pricing-banner-section p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .header .pricing-banner-section-title {
+    font-size: 32px;
+    line-height: 46px;
+  }
+  .header .pricing-banner-section-subTitle {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 376px) {
+  .header .navbar {
+    border-bottom: 1px solid #F5CA52;
+  }
+  .header .navbar .logo a h1 {
+    width: 131px;
+    height: 24px;
+  }
+  .header .pricing-banner {
+    background-image: url("../images/banner_sm.svg");
+    background-position: top 0px right 0px;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    height: 90vh;
+  }
+  .header .pricing-banner-section p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .header .pricing-banner-section-title {
+    font-size: 32px;
+    line-height: 46px;
+  }
+  .header .pricing-banner-section-subTitle {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: auto;
   }
 }
 /*# sourceMappingURL=all.css.map */
