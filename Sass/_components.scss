@@ -1,31 +1,40 @@
 // Navbar
 
 
+// footer
 
+.footer{
+  background:#F5F5F5;
+  text-align: center;
+  p{
+    padding: 16px 0px;
+  }
+}
 
 
 // button
 
 @mixin button($font-size){
-    display: inline-block;
-   text-align: center;
+  display: inline-block;
+  text-align: center;
   vertical-align: middle;
   border-radius: 1.5*$font-size;
   padding: 0.5*$font-size 2*$font-size;
   line-height: 1.5*$font-size;
   border: none;
+  font-family: $font-family-Comfortaa;
 }
 
 // button styles
 .btn-primary {
   background: $primary;
   color:white;
+  font-family: $font-family-Comfortaa;
 
 }
 .btn-danger{
   background: $danger;
   color:white;
-
 }
 
 

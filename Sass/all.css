@@ -71,9 +71,19 @@ body {
   line-height: 24px;
 }
 
+.footer {
+  background: #F5F5F5;
+  text-align: center;
+}
+
+.footer p {
+  padding: 16px 0px;
+}
+
 .btn-primary {
   background: #56C4C5;
   color: white;
+  font-family: "Comfortaa", cursive;
 }
 
 .btn-danger {
@@ -108,6 +118,23 @@ body {
   }
 }
 
+.container {
+  width: 100%;
+  padding: 0 139px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 376px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
 .index-bg {
   padding: 0;
   width: 100%;
@@ -131,23 +158,6 @@ body {
     background-image: url("../images/bg_home_sm.svg"), url("../images/ball01.svg"), url("../images/ball02.svg"), url("../images/ball03.svg");
     background-position: 20px 391px , left -77px top 743px, right -47px top 3067px, -76px 4827px;
     background-size: 334px 245px, 126px 126px, 135px 135px, 153px 153px;
-  }
-}
-
-.container {
-  width: 100%;
-  padding: 0 139px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 50px;
-  }
-}
-
-@media (max-width: 376px) {
-  .container {
-    padding: 0 20px;
   }
 }
 
@@ -191,6 +201,7 @@ body {
   padding: 8px 32px;
   line-height: 24px;
   border: none;
+  font-family: "Comfortaa", cursive;
 }
 
 .header .banner {
@@ -649,6 +660,7 @@ body {
   padding: 9px 36px;
   line-height: 27px;
   border: none;
+  font-family: "Comfortaa", cursive;
   text-decoration: none;
   font-family: "Comfortaa", cursive;
   margin-top: 24px;
@@ -835,15 +847,6 @@ body {
   }
 }
 
-.footer {
-  background: #F5F5F5;
-  text-align: center;
-}
-
-.footer p {
-  padding: 16px 0px;
-}
-
 .footer-plan {
   background-image: url("../images/home_footer.svg");
   background-size: cover;
@@ -869,6 +872,7 @@ body {
   padding: 9px 36px;
   line-height: 27px;
   border: none;
+  font-family: "Comfortaa", cursive;
   text-decoration: none;
   font-family: "Comfortaa", cursive;
 }
