@@ -46,3 +46,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+// self adjusted 2022 06 08
+
+*,*::before,*::after{
+  box-sizing: border-box;//確保內容向內推，並自己計算
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+} 
+
+
