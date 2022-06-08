@@ -32,6 +32,12 @@
   font-family: $font-family-Comfortaa;
 
 }
+.btn-outline-primary{
+  color: $primary;
+  font-family: $font-family-Comfortaa;
+  outline: 1px solid $primary;
+  background: white;
+}
 .btn-danger{
   background: $danger;
   color:white;

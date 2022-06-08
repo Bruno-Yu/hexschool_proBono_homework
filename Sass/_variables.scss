@@ -8,6 +8,12 @@ $warning:#F5CA52;
 $yellow:#FFD153;
 $danger:#FF5D50;
 
+.primary{
+  color: $primary;
+}
+.warning{
+  color: $warning;
+}
 
 // font-family
 $font-family-Noto-TC:  'Noto Sans TC', sans-serif;
