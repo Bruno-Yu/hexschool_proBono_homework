@@ -914,11 +914,16 @@ body {
   position: absolute;
   width: 100%;
   height: 470px;
-  /* UI Properties */
   background: #F7F9FD;
   background-position: right top;
   border-radius: 0px 0px 0px 300px;
   z-index: -5;
+}
+
+@media (max-width: 376px) {
+  .rectangle {
+    height: 495px;
+  }
 }
 
 .pricing-bg {
@@ -932,8 +937,15 @@ body {
   z-index: -1;
 }
 
+@media (max-width: 530px) {
+  .pricing-bg {
+    background-image: none;
+  }
+}
+
 .header {
   width: 100%;
+  height: 567px;
 }
 
 .header .navbar {
@@ -974,13 +986,6 @@ body {
   font-family: "Comfortaa", cursive;
 }
 
-.header .pricing-banner-section p {
-  font-size: 20px;
-  font-weight: bold;
-  color: #56C4C5;
-  line-height: 26px;
-}
-
 .header .pricing-banner-section-title {
   padding-top: 92px;
   font-size: 48px;
@@ -995,44 +1000,12 @@ body {
   margin-bottom: 269px;
 }
 
-@media (max-width: 530px) {
-  .header {
-    background: none;
-  }
-  .header .navbar {
-    border-bottom: 1px solid #F5CA52;
-  }
-  .header .navbar .logo a h1 {
-    width: 180px;
-    height: 30px;
-  }
-  .header .pricing-banner {
-    background-image: url("../images/banner_sm.svg");
-    background-position: top 0px right 0px;
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    height: 90vh;
-  }
-  .header .pricing-banner-section {
-    margin-bottom: auto;
-  }
-  .header .pricing-banner-section p {
-    font-size: 16px;
-    line-height: 26px;
-  }
-  .header .pricing-banner-section-title {
-    font-size: 32px;
-    line-height: 46px;
-  }
-  .header .pricing-banner-section-subTitle {
-    margin-top: 16px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
 @media (max-width: 376px) {
+  .header {
+    margin-bottom: 60px;
+  }
   .header .navbar {
+    background: white;
     border-bottom: 1px solid #F5CA52;
   }
   .header .navbar .logo a h1 {
@@ -1041,16 +1014,12 @@ body {
   }
   .header .pricing-banner {
     background-image: url("../images/banner_sm.svg");
-    background-position: top 0px right 0px;
     background-repeat: no-repeat;
     background-size: 100vw auto;
-    height: 90vh;
-  }
-  .header .pricing-banner-section p {
-    font-size: 16px;
-    line-height: 26px;
+    height: 495px;
   }
   .header .pricing-banner-section-title {
+    padding-top: 48px;
     font-size: 32px;
     line-height: 46px;
   }
@@ -1068,6 +1037,23 @@ body {
   background-size: 361px 361px;
   background-repeat: no-repeat;
   background-position: -267px 306px;
+  z-index: -2;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 0 50px;
+    background-size: 204px 204px;
+    background-position: -108px 1263px;
+  }
+}
+
+@media (max-width: 376px) {
+  .wrap {
+    padding: 0 16px;
+    background-size: 204px 204px;
+    background-position: -108px 1263px;
+  }
 }
 
 .packages {
@@ -1082,7 +1068,6 @@ body {
 }
 
 .packages-btns-group {
-  width: 736px;
   margin: 48px auto 54px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1213,6 +1198,88 @@ body {
   margin-bottom: 32px;
 }
 
+@media (max-width: 376px) {
+  .packages {
+    margin-bottom: 60px;
+  }
+  .packages-title {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .packages-btns-group {
+    margin: 24px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .packages-btns-group .select-btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 24px;
+    padding: 8px 32px;
+    line-height: 24px;
+    border: none;
+    font-family: "Comfortaa", cursive;
+    display: block;
+    margin: 3px 3px;
+  }
+  .packages-btns-group .active {
+    background: #56C4C5;
+    color: white;
+  }
+  .packages-content {
+    display: block;
+  }
+  .packages-content .card {
+    background: white;
+    padding: 0px 16px;
+    width: 100%;
+    background: #ffff;
+    -webkit-box-shadow: 0px 2px 10px #00000014;
+            box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+  }
+  .packages-content .card-title {
+    padding: 16px 0px;
+    border-bottom: 1px solid #DDDDDD;
+  }
+  .packages-content .card-body-top {
+    margin: 24px 0px 27px 0px;
+  }
+  .packages-content .card-body-md {
+    margin-bottom: 27px;
+  }
+  .packages-content .card-body-md-box {
+    padding: 24px 16px 24px 16px;
+  }
+  .packages-content .card-body-md-box .num {
+    font-size: 28px;
+    line-height: 32px;
+    font-family: "Comfortaa", cursive;
+  }
+  .packages-content .card-body-md .equal {
+    font-weight: bold;
+    width: 13px;
+    height: 35px;
+    font-size: 24px;
+    line-height: 35px;
+  }
+  .packages-content .card-body-bottom {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .packages-content .card-body-footer .btn {
+    margin-bottom: 24px;
+  }
+}
+
 .qna {
   margin-bottom: 100px;
 }
@@ -1226,6 +1293,7 @@ body {
 }
 
 .qna-item, .qna-item-show {
+  background: white;
   padding: 16px 32px;
   margin-bottom: 16px;
   -webkit-box-shadow: 0px 2px 10px #00000014;
@@ -1284,5 +1352,35 @@ body {
 
 .qna-item-show .ans {
   display: block;
+}
+
+@media (max-width: 376px) {
+  .qna {
+    margin-bottom: 60px;
+  }
+  .qna-title {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+  .qna-item, .qna-item-show {
+    padding: 16px 16px;
+  }
+  .qna-item .quest, .qna-item-show .quest {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .qna-item .quest p, .qna-item-show .quest p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .qna-item .quest .icon, .qna-item-show .quest .icon {
+    height: 16px;
+    width: 16px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
