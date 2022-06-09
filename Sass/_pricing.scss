@@ -2,13 +2,18 @@
 position:absolute;
 width: 100%;
 height: 470px;
-/* UI Properties */
 background: #F7F9FD;
 background-position: right top;
 border-radius: 0px 0px 0px 300px;
-// opacity: 1;
 z-index:-5;
 }
+
+@media(max-width:376px){
+  .rectangle{
+    height: 495px;
+  }
+}
+
 .pricing-bg{
   position:absolute;
   width: 100%;
@@ -19,18 +24,18 @@ z-index:-5;
   background-size: 885px 559px;
   z-index:-1;
 }
-// @media(max-width:530px){
-//   .pricing-bg{
-//     background-image: none;
-//   }
-// }
+@media(max-width:530px){
+  .pricing-bg{
+    background-image: none;
+  }
+}
 
 // header, navbar, banner
 .header{
-width: 100%;
-  // height: 100vh;
-  
+  width: 100%;  
+  height: 567px;
   .navbar{
+
     padding: 24px 0;
   .container{
   display: flex;
@@ -58,13 +63,6 @@ width: 100%;
   .pricing-banner{
 
   &-section {
-
-      p{
-        font-size: 20px;
-        font-weight: bold;
-        color: $primary;
-        line-height: 26px;
-      }
       &-title{
         padding-top: 92px;
         font-size: 48px;
@@ -80,50 +78,52 @@ width: 100%;
     }
   }
 }
-@media(max-width:530px){
-  .header{
-    background: none;
-    .navbar {
-      border-bottom: 1px solid $warning;
+// @media(max-width:530px){
+//   .header{
+//     background: none;
+//     .navbar {
+//       border-bottom: 1px solid $warning;
 
-      .logo {
-        a h1 {
-          width: 180px;
-          height: 30px;
-        }
-      }
-    }
-  .pricing-banner{
-  background-image:url('../images/banner_sm.svg') ;
-  background-position: top 0px right 0px;
-  background-repeat: no-repeat;
-  background-size: 100vw auto;
-    height: 90vh;
-    &-section {
-      margin-bottom: auto;
-    p{
-        font-size: 16px;
-        line-height: 26px;
-      }
-      &-title{
-        font-size: 32px;
-        line-height: 46px;
-      }
-      &-subTitle{
-        margin-top: 16px;
-        font-size: 16px;
-        line-height: 24px;
+//       .logo {
+//         a h1 {
+//           width: 180px;
+//           height: 30px;
+//         }
+//       }
+//     }
+//   .pricing-banner{
+//   background-image:url('../images/banner_sm.svg') ;
+//   background-position: top 0px right 0px;
+//   background-repeat: no-repeat;
+//   background-size: 100vw auto;
+//     height: 60vh;
+//     &-section {
+//       margin-bottom: auto;
+//     p{
+//         font-size: 16px;
+//         line-height: 26px;
+//       }
+//       &-title{
+//         font-size: 32px;
+//         line-height: 46px;
+//       }
+//       &-subTitle{
+//         margin-top: 16px;
+//         font-size: 16px;
+//         line-height: 24px;
         
-      }
-    }
-  }
-}
+//       }
+//     }
+//   }
+// }
 
-}
+// }
 
 @media(max-width: 376px){
   .header{
+    margin-bottom: 60px;
     .navbar {
+      background: white;
       border-bottom: 1px solid $warning;
 
       .logo {
@@ -133,18 +133,14 @@ width: 100%;
         }
       }
     }
-  .pricing-banner{
-  background-image:url('../images/banner_sm.svg') ;
-  background-position: top 0px right 0px;
-  background-repeat: no-repeat;
-  background-size: 100vw auto;
-  height: 90vh;
-    &-section {
-    p{
-        font-size: 16px;
-        line-height: 26px;
-      }
+    .pricing-banner{
+      background-image:url('../images/banner_sm.svg') ;
+      background-repeat: no-repeat;
+      background-size: 100vw auto;
+      height: 495px;
+     &-section {
       &-title{
+        padding-top: 48px;
         font-size: 32px;
         line-height: 46px;
       }
@@ -160,13 +156,32 @@ width: 100%;
 }
 }
 
+
 .wrap{
   padding: 0px 231px;
   background-image: url('../images/ball03.svg');
   background-size: 361px 361px;
   background-repeat: no-repeat;
   background-position: -267px 306px ;
+  z-index:-2;
 }
+
+@media(max-width: 768px){
+  .wrap{
+      padding: 0 50px;
+      background-size: 204px 204px;
+      background-position: -108px 1263px ;
+  }
+}
+
+@media(max-width: 376px){
+  .wrap{
+      padding: 0 16px;
+      background-size: 204px 204px;
+        background-position: -108px 1263px ;
+  }
+}
+
 
 // 區域 彈性選擇，提供您選擇最適合的方案
 .packages{
@@ -178,7 +193,6 @@ width: 100%;
     font-weight: bold;
   }
   &-btns-group{
-    width: 736px;
     margin: 48px auto 54px auto;
     display: flex;
     justify-content: center;
@@ -268,7 +282,79 @@ width: 100%;
       }
     }
   }
-
+}
+@media(max-width: 376px){
+  .packages{
+    margin-bottom: 60px;
+    &-title{
+    font-size: 25px;
+    line-height: 40px;
+    }
+    &-btns-group{
+    margin: 24px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .select-btn{
+      @include button(16px);
+      display: block;
+      margin:3px 3px;
+    }
+    .active{
+      background: $primary;
+      color:white;
+      }
+    }
+    &-content{
+    display: block;
+    .card{
+      background: white;
+      padding: 0px 16px;
+      width: 100%;
+      background: #ffff;
+      box-shadow: 0px 2px 10px #00000014;
+      border-radius: 12px;
+      &-title{
+        padding: 16px 0px;
+        border-bottom: 1px solid #DDDDDD;
+      }
+      &-body{
+        &-top{
+          margin: 24px 0px 27px 0px;
+        }
+        &-md{
+          margin-bottom: 27px;
+          &-box{
+            padding: 24px 16px 24px 16px;
+            .num{
+              font-size: 28px;
+              line-height: 32px;
+              font-family: $font-family-Comfortaa;
+            }
+          }
+          .equal{
+            font-weight: bold;
+            width: 13px;
+            height: 35px;
+            font-size: 24px;
+            line-height: 35px;
+          }
+        }
+        &-bottom{
+          margin-bottom: 24px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+        &-footer{
+          .btn{
+            margin-bottom: 24px;
+          }
+          
+        }
+      }
+    }
+  }
+  }
 }
 
 // 常見問題
@@ -283,6 +369,7 @@ width: 100%;
     margin-bottom: 43px;
   }
   &-item{
+    background: white;
     padding: 16px 32px;
     margin-bottom: 16px;
     box-shadow: 0px 2px 10px #00000014;
@@ -331,4 +418,31 @@ width: 100%;
         }
       }
     }
+  }
+
+  @media(max-width:376px){
+    .qna {
+  margin-bottom: 60px;
+  &-title{
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+  &-item{
+    padding: 16px 16px;
+    .quest{
+    display: flex;
+    justify-content: space-between;
+      p{
+      font-size: 16px;
+      line-height: 24px;
+      }
+      .icon{
+      height: 16px;
+      width: 16px;
+        }
+      }
+    }
+  }
+
   }
