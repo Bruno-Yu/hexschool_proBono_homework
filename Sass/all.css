@@ -1063,7 +1063,7 @@ body {
 }
 
 .wrap {
-  padding: 0px 226px;
+  padding: 0px 231px;
   background-image: url("../images/ball03.svg");
   background-size: 361px 361px;
   background-repeat: no-repeat;
@@ -1087,9 +1087,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .packages-btns-group .select-btn {
@@ -1102,6 +1102,7 @@ body {
   border: none;
   font-family: "Comfortaa", cursive;
   display: block;
+  margin: 0px 8px;
 }
 
 .packages-btns-group .active {
@@ -1113,19 +1114,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .packages-content .card {
   padding: 0px 29px;
-  width: 444px;
+  width: calc( 50% - 12px);
   background: #ffff;
   -webkit-box-shadow: 0px 2px 10px #00000014;
           box-shadow: 0px 2px 10px #00000014;
   border-radius: 12px;
-  margin-right: 24px;
 }
 
 .packages-content .card-title {
