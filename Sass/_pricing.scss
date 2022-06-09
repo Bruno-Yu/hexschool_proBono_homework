@@ -182,9 +182,14 @@ width: 100%;
     margin: 48px auto 54px auto;
     display: flex;
     justify-content: space-between;
-    button{
+    .select-btn{
       @include button(18px);
+      @extend .btn-outline-primary;
       display: block;
+    }
+    .active{
+      background: $primary;
+      color:white;
     }
   }
   &-content{

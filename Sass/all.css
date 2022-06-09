@@ -111,7 +111,7 @@ body {
   font-family: "Comfortaa", cursive;
 }
 
-.btn-outline-primary {
+.btn-outline-primary, .packages-btns-group .select-btn {
   color: #56C4C5;
   font-family: "Comfortaa", cursive;
   outline: 1px solid #56C4C5;
@@ -1092,7 +1092,7 @@ body {
           justify-content: space-between;
 }
 
-.packages-btns-group button {
+.packages-btns-group .select-btn {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -1102,6 +1102,11 @@ body {
   border: none;
   font-family: "Comfortaa", cursive;
   display: block;
+}
+
+.packages-btns-group .active {
+  background: #56C4C5;
+  color: white;
 }
 
 .packages-content {
