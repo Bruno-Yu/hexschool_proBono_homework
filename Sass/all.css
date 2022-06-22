@@ -108,12 +108,12 @@ body {
 .btn-primary {
   background: #56C4C5;
   color: white;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .btn-outline-primary, .packages-btns-group .select-btn {
   color: #56C4C5;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
   outline: 1px solid #56C4C5;
   background: white;
 }
@@ -137,6 +137,10 @@ body {
   right: 48px;
   bottom: 23px;
   border: none;
+}
+
+.btn-toTop:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 376px) {
@@ -216,7 +220,11 @@ body {
   padding: 8px 32px;
   line-height: 24px;
   border: none;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.header .navbar .price-btn:hover {
+  cursor: pointer;
 }
 
 .header .banner {
@@ -675,10 +683,13 @@ body {
   padding: 9px 36px;
   line-height: 27px;
   border: none;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
   text-decoration: none;
-  font-family: "Comfortaa", cursive;
   margin-top: 24px;
+}
+
+.area-3-text-btn:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -887,9 +898,12 @@ body {
   padding: 9px 36px;
   line-height: 27px;
   border: none;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
   text-decoration: none;
-  font-family: "Comfortaa", cursive;
+}
+
+.footer-plan-btn:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 376px) {
@@ -983,7 +997,11 @@ body {
   padding: 8px 32px;
   line-height: 24px;
   border: none;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.header .navbar .price-btn:hover {
+  cursor: pointer;
 }
 
 .header .pricing-banner-section-title {
@@ -1077,9 +1095,13 @@ body {
   padding: 9px 36px;
   line-height: 27px;
   border: none;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
   display: block;
   margin: 0px 8px;
+}
+
+.packages-btns-group .select-btn:hover {
+  cursor: pointer;
 }
 
 .packages-btns-group .active {
@@ -1186,8 +1208,12 @@ body {
   padding: 9px 36px;
   line-height: 27px;
   border: none;
-  font-family: "Comfortaa", cursive;
+  font-family: "Noto Sans TC", sans-serif;
   margin-bottom: 32px;
+}
+
+.packages-content .card-body-footer .btn:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1300px) {
@@ -1217,10 +1243,13 @@ body {
     padding: 8px 32px;
     line-height: 24px;
     border: none;
-    font-family: "Comfortaa", cursive;
+    font-family: "Noto Sans TC", sans-serif;
     display: block;
     margin: 3px 3px;
     white-space: nowrap;
+  }
+  .packages-btns-group .select-btn:hover {
+    cursor: pointer;
   }
   .packages-btns-group .active {
     background: #56C4C5;

@@ -6,7 +6,8 @@ import './plugins/jQuery.js';
 $(function () {
 	// toTop
 	$('.btn-toTop').on('click', function(){
-		$(window).scrollTop(0);
+		// $(window).scrollTop(0);
+		$('html,body').animate({ scrollTop:0 }, 1500);
 	});
 	// calculate
 	// 思路: 先分離基本版data-num按鈕 data-ppl 人數 data-basic 與data-bis商頁板，再設立data-num做乘除使用，但data-num要設立最大值
